@@ -73,21 +73,23 @@
   </header>
 
   <main>
-    <h1>Моноподы для селфи</h1>
+    <div class="page-container">
+      <h1>Моноподы для селфи</h1>
 
-    <ul class="breadcrumbs">
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#">Главная</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#">Каталог товаров</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__item is-current">Моноподы для селфи</a>
-      </li>
-    </ul>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__item is-current">Моноподы для селфи</a>
+        </li>
+      </ul>
+    </div>
 
-    <div class="catalog">
+    <section class="catalog">
       <div class="catalog__container">
         <div class="catalog__column catalog__column_left">
           <form class="filter catalog__filter" action="http://echo.htmlacademy.ru" method="get">
@@ -97,17 +99,16 @@
               <legend class="filter__legend">Стоимость</legend>
               <div class="filter__field">
                 <div class="range">
-                  <input class="range__input" type="text" name="cost_min" value="0" placeholder="Минимальная стоимость">
-                  <input class="range__input" type="text" name="cost_max" value="5000" placeholder="Максимальная стоимость">
-                  <div class="range__slider">
-                    <span class="range__delta"></span>
-                    <button class="range__button range__button_min" type="button">
-                      <span class="range__value">От 0</span>
-                    </button>
-                    <button class="range__button range__button_max" type="button">
-                      <span class="range__value">До 5000</span>
-                    </button>
-                  </div>
+                  <div class="range__track"></div>
+                  <div class="range__delta"></div>
+                  <button class="range__button range__button_min" type="button"></button>
+                  <button class="range__button range__button_max" type="button"></button>
+                  <label class="range__label range__label_min">от
+                    <input class="range__input" type="text" name="cost_min" value="0">
+                  </label>
+                  <label class="range__label range__label_max">до
+                    <input class="range__input" type="text" name="cost_max" value="5000">
+                  </label>
                 </div>
               </div>
             </fieldset>
@@ -137,14 +138,14 @@
             </fieldset>
 
             <fieldset class="filter__fieldset">
-              <legend class="filter__legend"></legend>
+              <legend class="filter__legend">Bluetooth</legend>
               <div class="filter__field">
-                <input class="filter__radio" type="radio" name="bluetooth" value="yes" id="bluetooth_1" checked>
-                <label class="filter__label" for="bluetooth_1">Есть</label>
+                <input class="filter__radio" type="radio" name="bluetooth" value="yes" id="bluetooth_yes" checked>
+                <label class="filter__label" for="bluetooth_yes">Есть</label>
               </div>
               <div class="filter__field">
-                <input class="filter__radio" type="radio" name="bluetooth" value="no" id="bluetooth_2">
-                <label class="filter__label" for="bluetooth_2">Нет</label>
+                <input class="filter__radio" type="radio" name="bluetooth" value="no" id="bluetooth_no">
+                <label class="filter__label" for="bluetooth_no">Нет</label>
               </div>
             </fieldset>
 
@@ -176,7 +177,7 @@
                 </div>
               </div>
               <a href="#" class="product__link">
-                <h2 class="product__title">Любительская селфи-палка</h2>
+                <h3 class="product__title">Любительская селфи-палка</h3>
               </a>
               <span class="product__price">500 руб.</span>
             </article>
@@ -190,7 +191,7 @@
                 </div>
               </div>
               <a href="#" class="product__link">
-                <h2 class="product__title">Профессиональная селфи-палка</h2>
+                <h3 class="product__title">Профессиональная селфи-палка</h3>
               </a>
               <span class="product__price">1 500 руб.</span>
             </article>
@@ -204,7 +205,7 @@
                 </div>
               </div>
               <a href="#" class="product__link">
-                <h2 class="product__title">Непотопляемая селфи-палка</h2>
+                <h3 class="product__title">Непотопляемая селфи-палка</h3>
               </a>
               <span class="product__price">2 500 руб.</span>
             </article>
@@ -218,7 +219,7 @@
                 </div>
               </div>
               <a href="#" class="product__link">
-                <h2 class="product__title">Селфи-палка «Следуй за мной»</h2>
+                <h3 class="product__title">Селфи-палка «Следуй за мной»</h3>
               </a>
               <span class="product__price">4 900 руб.</span>
             </article>
@@ -237,16 +238,13 @@
               <li class="pagination__item">
                 <a class="pagination__page" href="#">3</a>
               </li>
-              <li class="pagination__item">
-                <a class="pagination__page" href="#">4</a>
-              </li>
             </ul>
 
             <a class="pagination__next" href="#">Вперед</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -297,5 +295,6 @@
         <a class="footer__copy" href="http://htmlacademy.ru" target="_blank">htmlacademy.ru</a>
       </div>
     </div>
-  </footer>  </body>
+  </footer>
+  </body>
 </html>
