@@ -27,34 +27,26 @@
           <ul class="menu__list">
             <li class="menu__item">
               <a class="menu__link" href="#">Каталог товаров</a>
-              <div class="submenu menu__submenu">
-                <ul class="submenu__list">
-                  <li class="submenu__item">
-                    <a class="submenu__link" href="#">Виртуальная реальность</a>
-                  </li>
-                  <li class="submenu__item">
-                    <a class="submenu__link" href="catalog.html">Моноподы для селфи</a>
-                  </li>
-                  <li class="submenu__item">
-                    <a class="submenu__link" href="#">Экшен-камеры</a>
-                  </li>
-                </ul>
-
-                <ul class="submenu__list">
-                  <li class="submenu__item">
-                    <a class="submenu__link" href="#">Фитнесс-браслеты</a>
-                  </li>
-                  <li class="submenu__item">
-                    <a class="submenu__link" href="#">Умные часы</a>
-                  </li>
-                </ul>
-
-                <ul class="submenu__list">
-                  <li class="submenu__item">
-                    <a class="submenu__link" href="#">Квадрокоптеры</a>
-                  </li>
-                </ul>
-              </div>
+              <ul class="submenu menu__submenu">
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Фитнесс-браслеты</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Квадрокоптеры</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Умные часы</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Экшен-камеры</a>
+                </li>
+              </ul>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">Доставка</a>
@@ -74,12 +66,12 @@
   <main>
     <div class="page-container">
       <div class="slider">
-        <input class="slider__radio" type="radio" name="slider_control" id="bullet_1" tabindex="-1">
+        <input class="slider__radio" type="radio" name="slider_control" id="bullet_1" tabindex="-1" checked>
         <input class="slider__radio" type="radio" name="slider_control" id="bullet_2" tabindex="-1">
         <input class="slider__radio" type="radio" name="slider_control" id="bullet_3" tabindex="-1">
 
         <div class="slider__viewport">
-          <div class="slide slider__slide">
+          <section class="slide slider__slide">
             <img class="slide__image" src="http://placehold.it/560х500" width="560" height="500" alt="самая длинная палка для селфи">
             <div class="slide__content">
               <h2 class="slide__slogan">Делай селфи, как Бен Стиллер!</h2>
@@ -93,22 +85,22 @@
 
               <ul class="slide__params">
                 <li class="param slide__param">
-                  <div class="param__value">8,5 м</div>
-                  <div class="param__name">Длина палки</div>
+                  8,5 м
+                  <span class="param__name">Длина палки</span>
                 </li>
                 <li class="param slide__param">
-                  <div class="param__value">5 кг</div>
-                  <div class="param__name">Вес палки</div>
+                  5 кг
+                  <span class="param__name">Вес палки</span>
                 </li>
                 <li class="param slide__param">
-                  <div class="param__value">Карбон</div>
-                  <div class="param__name">Материал</div>
+                  Карбон
+                  <span class="param__name">Материал</span>
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
 
-          <div class="slide slider__slide">
+          <section class="slide slider__slide">
             <img class="slide__image" src="http://placehold.it/560х500" width="560" height="500" alt="мотивирующий фитнесс-браслет">
             <div class="slide__content">
               <h2 class="slide__slogan">Худеем правильно!</h2>
@@ -120,14 +112,14 @@
 
               <ul class="slide__params">
                 <li class="param slide__param">
-                  <div class="param__value">48 часов</div>
-                  <div class="param__name">Без подзарядки</div>
+                  48 часов
+                  <span class="param__name">Без подзарядки</span>
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
 
-          <div class="slide slider__slide">
+          <section class="slide slider__slide">
             <img class="slide__image" src="http://placehold.it/560х500" width="560" height="500" alt="квадрокоптер с мощным лазером">
             <div class="slide__content">
               <h2 class="slide__slogan">Порхает как бабочка, жалит как пчела!</h2>
@@ -140,16 +132,16 @@
 
               <ul class="slide__params">
                 <li class="param slide__param">
-                  <div class="param__value">800 м</div>
-                  <div class="param__name">Дальность полета</div>
+                  800 м
+                  <span class="param__name">Дальность полета</span>
                 </li>
                 <li class="param slide__param">
-                  <div class="param__value">50 м</div>
-                  <div class="param__name">Радиус поражения</div>
+                  50 м
+                  <span class="param__name">Радиус поражения</span>
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
         </div>
 
         <div class="slider__bullets">
@@ -181,34 +173,34 @@
       </ul>
     </div>
 
-    <div class="tabs">
-      <div class="tabs__container">
-        <div class="tabs__list">
-          <input class="tabs__radio" type="radio" name="tabs_control" id="tab_1" tabindex="-1">
-          <input class="tabs__radio" type="radio" name="tabs_control" id="tab_2" tabindex="-1">
-          <input class="tabs__radio" type="radio" name="tabs_control" id="tab_3" tabindex="-1">
+    <div class="services">
+      <div class="services__container">
+        <input class="services__radio" type="radio" name="services_control" id="tab_1" tabindex="-1" checked>
+        <input class="services__radio" type="radio" name="services_control" id="tab_2" tabindex="-1">
+        <input class="services__radio" type="radio" name="services_control" id="tab_3" tabindex="-1">
 
-          <label class="tabs__button" for="tab_1" tabindex="0">Доставка</label>
-          <label class="tabs__button" for="tab_2" tabindex="0">Гарантия</label>
-          <label class="tabs__button" for="tab_3" tabindex="0">Кредит</label>
+        <div class="services__list">
+          <label class="services__button" for="tab_1" tabindex="0">Доставка</label>
+          <label class="services__button" for="tab_2" tabindex="0">Гарантия</label>
+          <label class="services__button" for="tab_3" tabindex="0">Кредит</label>
         </div>
-        <ul class="tabs__panels">
-          <li class="tabs__panel tabs__panel_1">
+        <div class="services__panels">
+          <section class="services__panel">
             <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
-          </li>
-          <li class="tabs__panel tabs__panel_2">
+          </section>
+          <section class="services__panel">
             <h2>Гарантия</h2>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
-          </li>
-          <li class="tabs__panel tabs__panel_3">
+          </section>
+          <section class="services__panel">
             <h2>Кредит</h2>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для нашего банка, разумеется.</p>
-          </li>
-        </ul>
+          </section>
+        </div>
       </div>
     </div>
 
@@ -242,10 +234,10 @@
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
             компаниями:</p>
-          <ul>
-            <li>Деловые Линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
+          <ul class="list list_gray">
+            <li class="list__item">Деловые Линии</li>
+            <li class="list__item">Автотрейдинг</li>
+            <li class="list__item">ЖелДорЭкспедиция</li>
           </ul>
           <a class="about__more" href="#">Подробнее о нас</a>
         </section>
@@ -316,28 +308,25 @@
   </footer>
 
   <div class="popup popup_feedback" id="feedback">
-    <div class="popup__content">
-      <button class="popup__close" type="button">Закрыть</button>
-      <form class="feedback popup__feedback" action="http://echo.htmlacademy.ru" method="post">
-        <div class="feedback__row">
-          <div class="feedback__field">
-            <label class="feedback__label" for="name">Ваше имя:</label>
-            <input class="feedback__input" type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
-          </div>
-          <div class="feedback__field">
-            <label class="feedback__label" for="email">Ваш e-mail:</label>
-            <input class="feedback__input" type="email" name="email" id="email" placeholder="Для отправки ответа" required>
-          </div>
-        </div>
-        <div class="feedback__row">
-          <label class="feedback__label" for="message">Текст письма:</label>
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="В свободной форме" required></textarea>
-        </div>
-        <div class="feedback__row">
-          <button class="feedback__submit" type="submit">Отправить</button>
-        </div>
-      </form>
-    </div>
+    <button class="popup__close" type="button">Закрыть</button>
+    <form class="form popup__form" action="http://echo.htmlacademy.ru" method="post">
+      <div class="form__field form__field_half">
+        <label class="form__label" for="name">Ваше имя:</label>
+        <input class="form__input" type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
+      </div>
+
+      <div class="form__field form__field_half">
+        <label class="form__label" for="email">Ваш e-mail:</label>
+        <input class="form__input" type="email" name="email" id="email" placeholder="Для отправки ответа" required>
+      </div>
+
+      <div class="form__field form__field_full">
+        <label class="form__label" for="message">Текст письма:</label>
+        <textarea class="form__text" name="message" id="message" placeholder="В свободной форме" required></textarea>
+      </div>
+
+      <button class="form__submit" type="submit">Отправить</button>
+    </form>
   </div>
   </body>
 </html>
