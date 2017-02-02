@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин гаджетов Девайс</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -72,7 +73,7 @@
 
         <div class="slider__viewport">
           <section class="slide slider__slide">
-            <img class="slide__image" src="http://placehold.it/560х500" width="560" height="500" alt="самая длинная палка для селфи">
+            <img class="slide__image" src="img/slide-image-1.png" width="560" height="500" alt="самая длинная палка для селфи">
             <div class="slide__content">
               <h2 class="slide__slogan">Делай селфи, как Бен Стиллер!</h2>
 
@@ -101,7 +102,7 @@
           </section>
 
           <section class="slide slider__slide">
-            <img class="slide__image" src="http://placehold.it/560х500" width="560" height="500" alt="мотивирующий фитнесс-браслет">
+            <img class="slide__image" src="img/slide-image-2.png" width="560" height="500" alt="мотивирующий фитнесс-браслет">
             <div class="slide__content">
               <h2 class="slide__slogan">Худеем правильно!</h2>
               <p class="slide__description">
@@ -120,7 +121,7 @@
           </section>
 
           <section class="slide slider__slide">
-            <img class="slide__image" src="http://placehold.it/560х500" width="560" height="500" alt="квадрокоптер с мощным лазером">
+            <img class="slide__image" src="img/slide-image-3.png" width="560" height="500" alt="квадрокоптер с мощным лазером">
             <div class="slide__content">
               <h2 class="slide__slogan">Порхает как бабочка, жалит как пчела!</h2>
               <p class="slide__description">
@@ -179,23 +180,23 @@
         <input class="services__radio" type="radio" name="services_control" id="tab_2" tabindex="-1">
         <input class="services__radio" type="radio" name="services_control" id="tab_3" tabindex="-1">
 
-        <div class="services__switch">
+        <div class="services__list">
           <label class="services__button" for="tab_1" tabindex="0">Доставка</label>
           <label class="services__button" for="tab_2" tabindex="0">Гарантия</label>
           <label class="services__button" for="tab_3" tabindex="0">Кредит</label>
         </div>
-        <div class="services__list">
-          <section class="services__service">
+        <div class="services__panels">
+          <section class="services__panel">
             <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
           </section>
-          <section class="services__service">
+          <section class="services__panel">
             <h2>Гарантия</h2>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
           </section>
-          <section class="services__service">
+          <section class="services__panel">
             <h2>Кредит</h2>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -207,16 +208,24 @@
     <div class="page-container">
       <ul class="brands">
         <li class="brands__item">
-          <a class="brands__link" href="#">DJI</a>
+          <a class="brands__link" href="#">
+            <img class="brands__image" src="img/brand-1.png" width="260" height="100" alt="логотип DJI">
+          </a>
         </li>
         <li class="brands__item">
-          <a class="brands__link" href="#">SP Gadgets</a>
+          <a class="brands__link" href="#">
+            <img class="brands__image" src="img/brand-2.png" width="260" height="100" alt="логотип SP Gadgets">
+          </a>
         </li>
         <li class="brands__item">
-          <a class="brands__link" href="#">GoPro</a>
+          <a class="brands__link" href="#">
+            <img class="brands__image" src="img/brand-3.png" width="260" height="100" alt="логотип GoPro">
+          </a>
         </li>
         <li class="brands__item">
-          <a class="brands__link" href="#">VIVE</a>
+          <a class="brands__link" href="#">
+            <img class="brands__image" src="img/brand-4.png" width="260" height="100" alt="логотип VIVE">
+          </a>
         </li>
       </ul>
 
@@ -240,7 +249,7 @@
             Всякое бывает.</p>
           <div class="map about__map">
               <a class="map__link" href="https://www.google.ru/maps/place/ул.+Строителей,+15,+Москва,+119311/@55.687031,37.5274293,17z/" target="_blank">
-                <img class="map__placeholder" src="http://placehold.it/560x222" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
+                <img class="map__placeholder" src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
               </a>
           </div>
           <a class="about__more" href="#feedback">Напишите нам</a>

@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+body {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: "Open Sans Light", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 47px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+}
+
+.filter__title {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+}
