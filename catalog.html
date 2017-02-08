@@ -7,66 +7,65 @@
   </head>
   <body class="grid">
 
-  <header class="header">
-    <div class="header__container">
+  <header class="container header">
+    <div class="header__content">
       <a class="header__logo" href="index.html">Device</a>
 
-      <div class="header__row">
-        <form class="search header__search" action="http://echo.htmlacademy.ru" method="get">
-          <input class="search__field" type="search" name="q" placeholder="Поиск по сайту">
-          <button class="search__submit" type="submit">Найти</button>
-        </form>
-        <div class="user header__user">
-          <a class="user__cabinet" href="#">Валентин Петухов</a>
-          <a class="user__logout" href="#">Выйти</a>
-        </div>
-        <a class="header__compare" href="#">Сравнить</a>
-        <a class="header__cart" href="#">Корзина</a>
+      <form class="search header__search" action="http://echo.htmlacademy.ru" method="get">
+        <input class="search__field" type="search" name="q" placeholder="Поиск по сайту">
+        <button class="search__submit" type="submit">Найти</button>
+      </form>
+
+      <div class="user header__user">
+        <a class="user__cabinet" href="#">Валентин Петухов</a>
+        <a class="user__logout" href="#">Выйти</a>
       </div>
 
-      <div class="header__row">
-        <nav class="menu header__menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Каталог товаров</a>
-              <ul class="submenu menu__submenu">
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Фитнесс-браслеты</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Квадрокоптеры</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link is-current">Моноподы для селфи</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Умные часы</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Экшен-камеры</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Доставка</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Гарантия</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <a class="header__compare" href="#">Сравнить</a>
+
+      <a class="header__cart" href="#">Корзина</a>
+
+      <nav class="menu header__menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Каталог товаров</a>
+            <ul class="submenu menu__submenu">
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Фитнесс-браслеты</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Квадрокоптеры</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link is-current">Моноподы для селфи</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Умные часы</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Экшен-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Гарантия</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main>
-    <div class="page-container">
+    <div class="container">
       <h1>Моноподы для селфи</h1>
 
       <ul class="breadcrumbs">
@@ -83,7 +82,7 @@
     </div>
 
     <section class="catalog">
-      <div class="catalog__container">
+      <div class="container catalog__container">
         <div class="catalog__column catalog__column_left">
           <form class="filter catalog__filter" action="http://echo.htmlacademy.ru" method="get">
             <h2 class="filter__title">Фильтр:</h2>
@@ -241,7 +240,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__container">
+    <div class="container footer__container">
       <div class="footer__left">
         <a class="footer__logo" href="index.html">Device</a>
 
