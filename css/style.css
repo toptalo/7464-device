@@ -7,6 +7,155 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
+.header {
+}
+
+.header__container {
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header__logo {
+  display: block;
+  font: 900 48px/50px "Gilroy", Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.header__row {
+  padding: 0 60px;
+  font-size: 0;
+}
+
+.header__search {
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+  width: 440px;
+}
+
+.header__user {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 100px;
+  height: 40px;
+  width: 260px;
+}
+
+.header__compare {
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+  padding-left: 20px;
+  margin-left: 27px;
+}
+
+.header__cart {
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+  padding-left: 24px;
+}
+
+.header__menu {
+  padding: 0 60px;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+}
+
+.menu__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 38px;
+}
+
+.menu__item:first-child {
+  margin-right: 294px;
+}
+
+.menu__item:last-child {
+  margin-left: 76px;
+  margin-right: 0;
+}
+
+.menu__link {
+  display: block;
+  font: 900 18px/20px "Gilroy", Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__submenu {
+  position: absolute;
+  display: none;
+}
+
+.page-container {
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.slider {
+  position: relative;
+  height: 500px;
+}
+
+.slider__radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.slider__radio:nth-child(1):focus ~ .slider__bullets .slider__bullet:nth-child(1),
+.slider__radio:nth-child(2):focus ~ .slider__bullets .slider__bullet:nth-child(2),
+.slider__radio:nth-child(3):focus ~ .slider__bullets .slider__bullet:nth-child(3){
+  outline: 1px solid red;
+}
+.slider__radio:nth-child(1):checked ~ .slider__viewport .slider__slide:nth-child(1),
+.slider__radio:nth-child(2):checked ~ .slider__viewport .slider__slide:nth-child(2),
+.slider__radio:nth-child(3):checked ~ .slider__viewport .slider__slide:nth-child(3){
+  visibility: visible;
+}
+
+.slider__slide {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slider__bullets {
+  position: absolute;
+}
+
+.slide {
+  font-size: 0;
+}
+
+.slide__image {
+  display: inline-block;
+  vertical-align: top;
+  width: 560px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.slide__content {
+  display: inline-block;
+  vertical-align: top;
+  width: 560px;
+  height: auto;
+  margin-left: 20px;
+}
+
 h1 {
   font-size: 47px;
   line-height: normal;
@@ -19,4 +168,44 @@ h1 {
   line-height: normal;
   font-weight: 900;
   font-family: "Gilroy", Arial, sans-serif;
+}
+
+/* ====== Хелперы ====== */
+
+/* ------ Клеарфикс ------ */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ------ Сетка ------ */
+.grid > * {
+  outline: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.grid > * > * {
+  outline: 1px solid orange;
+  background-color: rgba(255, 165, 0, 0.2);
+}
+
+.grid > * > * > * {
+  outline: 1px solid yellow;
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+.grid > * > * > * > * {
+  outline: 1px solid green;
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+.grid > * > * > * > * > * {
+  outline: 1px solid blue;
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.grid > * > * > * > * > * > * {
+  outline: 1px solid blueviolet;
+  background-color: rgba(138, 43, 226, 0.6);
 }
