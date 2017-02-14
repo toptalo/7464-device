@@ -830,7 +830,243 @@ h1 {
 }
 
 .catalog__filter {
-  padding-left: 60px;
+  width: 201px;
+  padding: 20px 0 0 59px;
+}
+
+.filter__title {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 89px;
+  font: 900 16px/30px "Gilroy", Arial, sans-serif;
+  letter-spacing: .23em;
+  text-transform: uppercase;
+}
+
+.filter__fieldset {
+  position: relative;
+  margin: 0 0 18px;
+  padding: 61px 0 0;
+  border: none;
+  border-top: 2px solid #000;
+}
+
+.filter__fieldset + .filter__fieldset {
+  margin-bottom: 23px;
+  padding-top: 60px;
+}
+
+.filter__legend {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font: 900 18px/20px "Gilroy", Arial, sans-serif;
+}
+
+.filter__field {
+  position: relative;
+  margin-bottom: 17px;
+}
+
+.filter__check,
+.filter__radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.filter__check:checked + .filter__label::after,
+.filter__radio:checked + .filter__label::after {
+  opacity: 1;
+}
+
+.filter__label {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+  font-size: 14px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.filter__radio + .filter__label::before,
+.filter__check + .filter__label::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 23px;
+  height: 23px;
+}
+
+.filter__check + .filter__label::before {
+  background-color: #dbdbdb;
+}
+
+.filter__radio + .filter__label::before {
+  border: 2px solid #c6c6c6;
+  border-radius: 50%;
+}
+
+.filter__check + .filter__label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  display: block;
+  width: 12px;
+  height: 7px;
+  background: #000;
+  opacity: 0;
+}
+
+.filter__radio + .filter__label::after {
+  content: " ";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  display: block;
+  box-sizing: border-box;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.filter__submit {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  padding: 10px 0;
+  border: none;
+  font: 900 18px/20px "Gilroy", Arial, sans-serif;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.filter__submit::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 8px;
+  margin-top: -4px;
+  background-color: #f0c52e;
+  z-index: -1;
+}
+
+.filter__submit:hover::before {
+  top: 0;
+  height: 100%;
+  margin-top: 0;
+}
+
+.filter__submit:active {
+  color: rgba(0, 0, 0, .3);
+}
+
+.range {
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 26px;
+}
+
+.range__track {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #dbdbdb;
+}
+
+.range__delta {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding-top: 22px;
+}
+
+.range__delta::before {
+  content: " ";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 2px;
+  background-color: #91c92f;
+}
+
+.range__button {
+  position: absolute;
+  top: 9px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: -7px 0;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.range__button:active {
+  margin: -8px -1px;
+  border: 3px solid #fff;
+  background-color: #91c92f;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .75);
+}
+
+.range__button_min {
+  left: 0;
+}
+
+.range__button_max {
+  right: 0;
+}
+
+.range__label {
+  display: inline-block;
+  vertical-align: baseline;
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  opacity: .2;
+}
+
+.range__label_min {
+}
+
+.range__label_max {
+  margin-right: -20px;
+}
+
+.range__input {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 35px;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
 }
 
 .sort {
