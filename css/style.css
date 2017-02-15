@@ -1169,6 +1169,149 @@ h1 {
   flex-wrap: wrap;
 }
 
+.catalog__item {
+  width: 360px;
+  margin-bottom: 52px;
+}
+
+.product {
+  position: relative;
+  font-size: 0;
+}
+
+.product:hover .product__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product.is-new::after {
+  content: "new";
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  border: 2px solid;
+  border-radius: 50%;
+  font: 900 14px/60px "Gilroy", Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  opacity: .2;
+}
+
+.product__preview {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.product__photo {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: auto;
+}
+
+.product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.product__add {
+
+}
+
+.product__compare {
+
+}
+
+.product__link {
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
+  text-decoration: none;
+}
+
+.product__title {
+  margin: 0;
+  padding: 0;
+  font: 900 18px/20px "Gilroy", Arial, sans-serif;
+  color: #000;
+}
+
+.product__price {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  font: 300 16px/20px "Gilroy", Arial, sans-serif;
+  text-align: right;
+  color: #464646;
+}
+
+.catalog__pagination {
+  margin-top: -11px;
+  margin-bottom: 73px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, .08);
+}
+
+.pagination__back,
+.pagination__next {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 25px 30px;
+  font: 900 16px/20px "Gilroy", Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .22em;
+  color: rgba(0, 0, 0, .3);
+}
+
+.pagination__back[href],
+.pagination__next[href] {
+  color: #000;
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination__item {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.pagination__page {
+  display: block;
+  padding: 25px 12px;
+  font: 900 16px/20px "Gilroy", Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .22em;
+  color: #000;
+  opacity: .3;
+}
+
+.pagination__page:hover,
+.pagination__page:focus,
+.pagination__page.is-current {
+  opacity: 1;
+}
+
 .footer {
   padding: 58px 0 20px;
   color: #fff;
