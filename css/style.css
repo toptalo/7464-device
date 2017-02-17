@@ -162,10 +162,6 @@ body {
   list-style-type: none;
 }
 
-.menu__item {
-  display: block;
-}
-
 .header__menu .menu__item {
   margin-right: 35px;
 }
