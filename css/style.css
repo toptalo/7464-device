@@ -36,6 +36,10 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
+a[href], button {
+  cursor: pointer;
+}
+
 .container {
   box-sizing: border-box;
   width: 1200px;
@@ -128,12 +132,14 @@ body {
   opacity: .6;
 }
 
+.search__field:valid,
 .search__field:focus {
   outline: none;
   border-bottom-color: #000;
   opacity: 1;
 }
 
+.search__field:valid + .search__submit,
 .search__field:focus + .search__submit {
   visibility: visible;
   opacity: 1;
@@ -154,7 +160,6 @@ body {
   background-color: transparent;
   visibility: hidden;
   opacity: 0;
-  cursor: pointer;
 }
 
 .search__submit:focus,
@@ -940,8 +945,13 @@ body {
 
 .about__column {
   position: relative;
+  box-sizing: border-box;
   width: 560px;
   padding-top: 51px;
+}
+
+.about__column:first-child {
+  padding-right: 85px;
 }
 
 .about__column::before {
@@ -970,7 +980,7 @@ body {
   color: #464646;
 }
 
-.about__map {
+.map {
   margin: 39px 0 69px;
 }
 
@@ -1301,7 +1311,6 @@ h1 {
   text-align: center;
   color: #000;
   background-color: transparent;
-  cursor: pointer;
 }
 
 .filter__submit::before {
@@ -1607,7 +1616,6 @@ h1 {
   text-align: center;
   color: #000;
   background-color: transparent;
-  cursor: pointer;
 }
 
 .product__add::before {
@@ -1742,7 +1750,7 @@ h1 {
 }
 
 .footer {
-  padding: 58px 0 20px;
+  padding: 58px 0 49px;
   color: #fff;
   background-color: #4c4b48;
 }
