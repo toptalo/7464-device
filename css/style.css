@@ -1001,10 +1001,6 @@ a[href], button {
   color: #464646;
 }
 
-.about .map {
-  margin: 39px 0 69px;
-}
-
 .about__more {
   position: relative;
   display: inline-block;
@@ -1069,6 +1065,15 @@ a[href], button {
   opacity: .3;
 }
 
+.about .map {
+  margin: 39px 0 69px;
+}
+
+.popup .map {
+  width: 960px;
+  height: 569px;
+}
+
 .map__link {
   display: block;
   text-decoration: none;
@@ -1077,6 +1082,10 @@ a[href], button {
 .map__placeholder {
   display: inline-block;
   vertical-align: top;
+}
+
+.map__iframe {
+  border: none;
 }
 
 h1 {
@@ -1790,6 +1799,7 @@ h1 {
 
 .popup.is-visible {
   display: block;
+  animation: bounce .6s forwards;
 }
 
 .popup_feedback {
@@ -2193,42 +2203,18 @@ h1 {
   opacity: .3;
 }
 
-/* ====== Хелперы ====== */
-
-/* ------ Клеарфикс ------ */
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+@keyframes bounce {
+  0% {
+    transform: translateY(2000px);
+  }
+  70% {
+    transform: translateY(-30px);
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-/* ------ Сетка ------ */
-.grid > * {
-  outline: 1px solid yellow;
-  background-color: rgba(255, 255, 0, 0.3);
-}
-
-.grid > * > * {
-  outline: 1px solid orange;
-  background-color: rgba(255, 165, 0, 0.2);
-}
-
-.grid > * > * > * {
-  outline: 1px solid red;
-  background-color: rgba(255, 0, 0, 0.1);
-}
-
-.grid > * > * > * > * {
-  outline: 1px solid green;
-  background-color: rgba(0, 255, 0, 0.4);
-}
-
-.grid > * > * > * > * > * {
-  outline: 1px solid blue;
-  background-color: rgba(0, 0, 255, 0.5);
-}
-
-.grid > * > * > * > * > * > * {
-  outline: 1px solid blueviolet;
-  background-color: rgba(138, 43, 226, 0.6);
-}

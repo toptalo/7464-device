@@ -251,12 +251,12 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
             Всякое бывает.</p>
-          <div class="map about__map">
+          <div class="map about__map js-show-contacts">
               <a class="map__link" href="https://www.google.ru/maps/place/ул.+Строителей,+15,+Москва,+119311/@55.687031,37.5274293,17z/" target="_blank">
                 <img class="map__placeholder" src="img/map.png" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
               </a>
           </div>
-          <a class="about__more" href="#feedback">Напишите нам</a>
+          <a class="about__more js-show-feedback" href="#">Напишите нам</a>
         </section>
       </div>
     </div>
@@ -312,9 +312,9 @@
     </div>
   </footer>
 
-  <div class="popup popup_feedback" id="feedback">
-    <button class="popup__close" type="button">Закрыть</button>
-    <form class="form popup__form" action="http://echo.htmlacademy.ru" method="post">
+  <div class="popup popup_feedback js-popup-feedback" id="feedback">
+    <button class="popup__close js-popup-close" type="button">Закрыть</button>
+    <form class="form popup__form js-feedback-form" action="http://echo.htmlacademy.ru" method="post">
       <div class="form__field form__field_half">
         <label class="form__label" for="name">Ваше имя:</label>
         <input class="form__input" type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста" required>
@@ -333,13 +333,13 @@
       <button class="form__submit" type="submit">Отправить</button>
     </form>
   </div>
-  <div class="popup popup_contacts" id="contacts">
-    <button class="popup__close" type="button">Закрыть</button>
+  <div class="popup popup_contacts js-popup-contacts" id="contacts">
+    <button class="popup__close js-popup-close" type="button">Закрыть</button>
     <div class="map popup__map">
-      <a class="map__link" href="https://www.google.ru/maps/place/ул.+Строителей,+15,+Москва,+119311/@55.687031,37.5274293,17z/" target="_blank">
-        <img class="map__placeholder" src="img/map-big.png" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
-      </a>
+      <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2249.1125477584787!2d37.5274293!3d55.687031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1487510526526" width="960" height="569" allowfullscreen></iframe>
     </div>
   </div>
+
+  <script src="js/global.js" defer></script>
   </body>
 </html>
