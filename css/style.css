@@ -813,26 +813,26 @@ a[href], button {
   opacity: 0;
 }
 
-.services__radio:nth-child(1):checked ~ .services__panels .services__panel:nth-child(1),
-.services__radio:nth-child(2):checked ~ .services__panels .services__panel:nth-child(2),
-.services__radio:nth-child(3):checked ~ .services__panels .services__panel:nth-child(3) {
+.services__radio[id="tab_1"]:checked ~ .services__panels .services__panel[id="service_1"],
+.services__radio[id="tab_2"]:checked ~ .services__panels .services__panel[id="service_2"],
+.services__radio[id="tab_3"]:checked ~ .services__panels .services__panel[id="service_3"] {
   position: relative;
   visibility: visible;
 }
 
 .services__button:active,
-.services__radio:nth-child(1):checked ~ .services__list .services__button:nth-child(1),
-.services__radio:nth-child(2):checked ~ .services__list .services__button:nth-child(2),
-.services__radio:nth-child(3):checked ~ .services__list .services__button:nth-child(3) {
+.services__radio[id="tab_1"]:checked ~ .services__list .services__button[for="tab_1"],
+.services__radio[id="tab_2"]:checked ~ .services__list .services__button[for="tab_2"],
+.services__radio[id="tab_3"]:checked ~ .services__list .services__button[for="tab_3"] {
   color: #f0c52e;
   background-color: #000;
   box-shadow: 117px 0 #000;
 }
 
 .services__button:active::before,
-.services__radio:nth-child(1):checked ~ .services__list .services__button:nth-child(1)::before,
-.services__radio:nth-child(2):checked ~ .services__list .services__button:nth-child(2)::before,
-.services__radio:nth-child(3):checked ~ .services__list .services__button:nth-child(3)::before {
+.services__radio[id="tab_1"]:checked ~ .services__list .services__button[for="tab_1"]::before,
+.services__radio[id="tab_2"]:checked ~ .services__list .services__button[for="tab_2"]::before,
+.services__radio[id="tab_3"]:checked ~ .services__list .services__button[for="tab_3"]::before {
   display: none;
 }
 
