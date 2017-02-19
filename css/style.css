@@ -466,7 +466,7 @@ a[href], button {
 
 .slider {
   position: relative;
-  height: 500px;
+  min-height: 500px;
   margin-bottom: 92px;
   counter-reset: slider;
   overflow: hidden;
@@ -493,6 +493,7 @@ a[href], button {
 .slider__radio[id="bullet_1"]:checked ~ .slider__viewport .slider__slide[id="slide_1"],
 .slider__radio[id="bullet_2"]:checked ~ .slider__viewport .slider__slide[id="slide_2"],
 .slider__radio[id="bullet_3"]:checked ~ .slider__viewport .slider__slide[id="slide_3"] {
+  position: relative;
   visibility: visible;
 }
 
@@ -2191,44 +2192,4 @@ h1 {
 
 .footer__copy:active {
   opacity: .3;
-}
-
-/* ====== Хелперы ====== */
-
-/* ------ Клеарфикс ------ */
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* ------ Сетка ------ */
-.grid > * {
-  outline: 1px solid yellow;
-  background-color: rgba(255, 255, 0, 0.3);
-}
-
-.grid > * > * {
-  outline: 1px solid orange;
-  background-color: rgba(255, 165, 0, 0.2);
-}
-
-.grid > * > * > * {
-  outline: 1px solid red;
-  background-color: rgba(255, 0, 0, 0.1);
-}
-
-.grid > * > * > * > * {
-  outline: 1px solid green;
-  background-color: rgba(0, 255, 0, 0.4);
-}
-
-.grid > * > * > * > * > * {
-  outline: 1px solid blue;
-  background-color: rgba(0, 0, 255, 0.5);
-}
-
-.grid > * > * > * > * > * > * {
-  outline: 1px solid blueviolet;
-  background-color: rgba(138, 43, 226, 0.6);
 }
