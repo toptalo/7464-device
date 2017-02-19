@@ -851,6 +851,10 @@ a[href], button {
   z-index: 1;
 }
 
+.services__button:active {
+  outline: none;
+}
+
 .services__button::before {
   content: " ";
   position: absolute;
