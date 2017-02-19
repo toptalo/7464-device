@@ -7,7 +7,7 @@
 
   var $popups = $.querySelectorAll('.js-popup-feedback, .js-popup-contacts');
 
-  $popups.forEach(function ($popup) {
+  [].forEach.call($popups, function ($popup) {
     $popup.querySelector('.js-popup-close').addEventListener('click', function (event) {
       event.preventDefault();
 
@@ -59,11 +59,15 @@
   }
 
   function storeData () {
-    var name = $feedbackForm.querySelector('[name="name"]').value;
-    var email = $feedbackForm.querySelector('[name="email"]').value;
+    if (typeof window.localStorage === 'object') {
+      var name = $feedbackForm.querySelector('[name="name"]').value;
+      var email = $feedbackForm.querySelector('[name="email"]').value;
 
-    localStorage.setItem('name', name);
-    localStorage.setItem('email', email);
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+    }
+
+    return true;
   }
 
   $feedbackLink.addEventListener('click', function (event) {
@@ -72,10 +76,15 @@
     $feedbackPopup.classList.add('is-visible');
     var emptyFields = [];
 
-    $feedbackFields.forEach(function ($field) { // заполняю сохраненные поля
-      var savedValue = localStorage.getItem($field.name);
-      if (savedValue) {
-        $field.value = savedValue;
+
+    [].forEach.call($feedbackFields, function ($field) { // заполняю сохраненные поля
+      if (typeof window.localStorage === 'object') {
+        var savedValue = localStorage.getItem($field.name);
+        if (savedValue) {
+          $field.value = savedValue;
+        } else {
+          emptyFields.push($field);
+        }
       } else {
         emptyFields.push($field);
       }
@@ -89,7 +98,7 @@
   $feedbackForm.addEventListener('submit', function (event) {
     var errorsCount = 0;
 
-    $feedbackFields.forEach(function ($field) { // проверяю все поля
+    [].forEach.call($feedbackFields, function ($field) { // проверяю все поля
       if (isValidField($field)) {
         hideErrorFor($field);
       } else {
@@ -99,13 +108,15 @@
     });
 
     if (errorsCount !== 0) { // если есть ошибки, ничего не делаю
+      console.log('preventDefault');
       event.preventDefault();
     } else { // иначе сохраняю и сабмичу
+      console.log('submit');
       storeData();
     }
   });
 
-  $feedbackFields.forEach(function ($field) {
+  [].forEach.call($feedbackFields, function ($field) {
     $field.addEventListener('input', function () { // убираю инвалидный класс если поле исправили
       if ($field.classList.contains('is-invalid') && isValidField($field)) {
         hideErrorFor($field);
