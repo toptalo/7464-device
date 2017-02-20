@@ -1,0 +1,18 @@
+{
+  "name": "device",
+  "version": "1.0.0",
+  "description": "Личный проект «Девайс»",
+  "main": "gulpfile.js",
+  "repository": "git@github.com:toptalo/7464-device.git",
+  "author": "https://github.com/toptalo",
+  "devDependencies": {
+    "autoprefixer": "^6.7.3",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.1",
+    "postcss-sprites": "^4.2.0"
+  }
+}

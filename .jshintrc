@@ -26,6 +26,7 @@
     "browser": true,
     "devel": true,
     "predef": [
-        "google"
+        "google",
+        "require"
     ]
 }

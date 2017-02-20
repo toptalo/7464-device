@@ -108,10 +108,8 @@
     });
 
     if (errorsCount !== 0) { // если есть ошибки, ничего не делаю
-      console.log('preventDefault');
       event.preventDefault();
     } else { // иначе сохраняю и сабмичу
-      console.log('submit');
       storeData();
     }
   });
