@@ -1014,10 +1014,6 @@ a[href], button {
   color: #464646;
 }
 
-.about .map {
-  margin: 39px 0 69px;
-}
-
 .about__more {
   position: relative;
   display: inline-block;
@@ -1082,6 +1078,15 @@ a[href], button {
   opacity: .3;
 }
 
+.about .map {
+  margin: 39px 0 69px;
+}
+
+.popup .map {
+  width: 960px;
+  height: 569px;
+}
+
 .map__link {
   display: block;
   text-decoration: none;
@@ -1090,6 +1095,10 @@ a[href], button {
 .map__placeholder {
   display: inline-block;
   vertical-align: top;
+}
+
+.map__iframe {
+  border: none;
 }
 
 .title {
@@ -1302,7 +1311,7 @@ a[href], button {
   display: block;
   width: 12px;
   height: 7px;
-  background-image: url("../img/icon-check.png");
+  background: url("../img/icon-check.png") no-repeat;
   opacity: 0;
 }
 
@@ -2208,3 +2217,19 @@ a[href], button {
 .footer__copy:active {
   opacity: .3;
 }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(2000px);
+  }
+  70% {
+    transform: translateY(-30px);
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
