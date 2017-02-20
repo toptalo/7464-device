@@ -10,7 +10,9 @@
 
   <header class="container header">
     <div class="header__content">
-      <a class="header__logo">Device</a>
+      <div class="header__logo">
+        <a class="header__home">Device</a>
+      </div>
 
       <form class="search header__search" action="http://echo.htmlacademy.ru" method="get">
         <input class="search__field" type="search" name="q" placeholder="Поиск по сайту" required>
@@ -175,11 +177,11 @@
     </div>
 
     <div class="services">
-      <div class="container services__container">
-        <input class="services__radio" type="radio" name="services_control" id="tab_1" checked>
-        <input class="services__radio" type="radio" name="services_control" id="tab_2">
-        <input class="services__radio" type="radio" name="services_control" id="tab_3">
+      <input class="services__radio" type="radio" name="services_control" id="tab_1" checked>
+      <input class="services__radio" type="radio" name="services_control" id="tab_2">
+      <input class="services__radio" type="radio" name="services_control" id="tab_3">
 
+      <div class="container services__container">
         <div class="services__list">
           <label class="services__button" for="tab_1">Доставка</label>
           <label class="services__button" for="tab_2">Гарантия</label>
