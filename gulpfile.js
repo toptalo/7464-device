@@ -18,7 +18,7 @@ gulp.task('connect', function () {
 });
 
 gulp.task('minify-script', function () {
-  gulp.src('./js/global.js')
+  gulp.src('./js/main.js')
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))
     .pipe(gulp.dest('./js/'));
@@ -29,7 +29,7 @@ gulp.task('sprite-style', function () {
     .pipe(postcss([
       sprites({
         stylesheetPath: './*.css',
-        spritePath    : './img/'
+        spritePath: './img/'
       })
     ]))
     .pipe(gulp.dest('./css'))

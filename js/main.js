@@ -7,14 +7,14 @@
 
   var $popups = $.querySelectorAll('.js-popup-feedback, .js-popup-contacts');
 
-  [].forEach.call($popups, function ($popup) {
+  [].forEach.call($popups, function ($popup) { // Закрытие кнопкой
     $popup.querySelector('.js-popup-close').addEventListener('click', function (event) {
       event.preventDefault();
 
       $popup.classList.remove('is-visible');
     }, false);
 
-    window.addEventListener('keyup', function (event) {
+    window.addEventListener('keyup', function (event) { // Закрытие по Esc
       if (event.keyCode === 27 && $popup.classList.contains('is-visible')) {
         $popup.classList.remove('is-visible');
       }
@@ -73,11 +73,16 @@
   $feedbackLink.addEventListener('click', function (event) {
     event.preventDefault();
 
+    if ($feedbackPopup.classList.contains('is-shaked')) { // если у попапа был класс трясучки с прошлого показа - удаляю его
+      $feedbackPopup.classList.remove('is-shaked');
+    }
+
     $feedbackPopup.classList.add('is-visible');
     var emptyFields = [];
 
-
     [].forEach.call($feedbackFields, function ($field) { // заполняю сохраненные поля
+      hideErrorFor($field); // если у поля был класс инвалидности с прошлого показа - удаляю его
+
       if (typeof window.localStorage === 'object') {
         var savedValue = localStorage.getItem($field.name);
         if (savedValue) {
@@ -107,16 +112,21 @@
       }
     });
 
-    if (errorsCount !== 0) { // если есть ошибки, ничего не делаю
+    if (errorsCount !== 0) { // если есть ошибки, ничего не делаю и трясу попапом
       event.preventDefault();
+      $feedbackPopup.classList.add('is-shaked');
     } else { // иначе сохраняю и сабмичу
       storeData();
     }
   });
 
   [].forEach.call($feedbackFields, function ($field) {
-    $field.addEventListener('input', function () { // убираю инвалидный класс если поле исправили
-      if ($field.classList.contains('is-invalid') && isValidField($field)) {
+    $field.addEventListener('input', function () {
+      if ($feedbackPopup.classList.contains('is-shaked')) { // удаляю трясучку при изменении полей формы
+        $feedbackPopup.classList.remove('is-shaked');
+      }
+
+      if ($field.classList.contains('is-invalid') && isValidField($field)) { // убираю инвалидный класс если поле исправили
         hideErrorFor($field);
       }
     });
