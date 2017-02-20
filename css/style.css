@@ -86,6 +86,7 @@ a[href], button {
 }
 
 .header__home {
+  display: inline-block;
   font: 900 48px/50px "Gilroy", Arial, sans-serif;
   letter-spacing: .016em;
   text-transform: uppercase;
@@ -821,13 +822,13 @@ a[href], button {
 
 .gadgets__link_watch::after {
   background-image: url("../img/sprite.png");
-  background-position: 0px -356px;
+  background-position: 0 -356px;
   background-size: 540px 516px;
 }
 
 .gadgets__link_quadrocopter::after {
   background-image: url("../img/sprite.png");
-  background-position: 0px -196px;
+  background-position: 0 -196px;
   background-size: 540px 516px;
 }
 
@@ -972,19 +973,19 @@ a[href], button {
 
 .services__panel:nth-child(1)::after {
   background-image: url("../img/sprite.png");
-  background-position: -180px 0px;
+  background-position: -180px 0;
   background-size: 540px 516px;
 }
 
 .services__panel:nth-child(2)::after {
   background-image: url("../img/sprite.png");
-  background-position: -360px 0px;
+  background-position: -360px 0;
   background-size: 540px 516px;
 }
 
 .services__panel:nth-child(3)::after {
   background-image: url("../img/sprite.png");
-  background-position: 0px 0px;
+  background-position: 0 0;
   background-size: 540px 516px;
 }
 
