@@ -1,4 +1,4 @@
-# Личный проект «Девайс»
+# [Личный проект «Девайс»](https://toptalo.github.io/7464-device/index.html)
 
 * Студент: [Виктор Дмитриевцев](https://up.htmlacademy.ru/htmlcss/16/user/7464).
 * Наставник: [Игорь Яруткин](https://htmlacademy.ru/profile/id145716).
